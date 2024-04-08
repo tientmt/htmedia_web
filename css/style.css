@@ -513,7 +513,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .welcome {
     max-width: 900px;
-    text-align: center;
+    text-align: left;
 }
 
 #about .welcome h2 {
