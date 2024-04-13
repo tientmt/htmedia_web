@@ -1119,3 +1119,48 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer p a:hover {
     color: #ffffff;
 }
+
+/** zalo and phone start **/
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.button-contact {
+    position: fixed; /* Làm cho nút luôn nổi và không di chuyển khi scroll */
+    bottom: 20px; /* Khoảng cách từ dưới cùng của màn hình */
+    left: 20px; /* Khoảng cách từ cạnh trái của màn hình */
+    z-index: 1000; /* Đảm bảo rằng nó luôn hiển thị trên cùng */
+    display: inline-block; /* Để cho phép transform */
+    transition: transform 0.5s; /* Suôn sẻ chuyển động */
+    animation: swing 0.5s infinite alternate; /* Animation xoay lắc liên tục */
+}
+
+#zalo-vr {
+    margin-bottom: 60px; /* Khoảng cách giữa nút Zalo và Phone, bạn có thể điều chỉnh tùy ý */
+}
+.phone-vr {
+    position: relative; /* Thiết lập vị trí tương đối để chứa các phần tử bên trong */
+    margin-bottom: 10px; /* Khoảng cách giữa các nút nếu bạn có nhiều hơn một nút */
+}
+
+.phone-vr-img-circle {
+    width: 50px; /* Kích thước của vòng tròn ngoài cùng */
+    height: 50px;
+    border-radius: 50%; /* Làm cho nó trở thành hình tròn */
+    overflow: hidden; /* Ẩn bất kỳ phần nào của ảnh nằm ngoài kích thước đã đặt */
+    display: flex; /* Giúp căn chỉnh ảnh chính giữa */
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-vr-img-circle img {
+    width: 100%; /* Làm cho ảnh vừa vặn với kích thước của vòng tròn */
+    height: auto; /* Đảm bảo tỷ lệ của ảnh được giữ nguyên */
+}
+/** zalo and phone end **/
